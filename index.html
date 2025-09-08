@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroHorizon AI | Future of AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif; scroll-behavior: smooth;
+    }
+    body {
+      background: #0a0a23; color: #fff; text-align: center;
+      overflow-x: hidden;
+    }
+    .hero {
+      background: url('ai-powered-female-robot-in-a-digital-data-stream_11137543.jpg') no-repeat center/cover;
+      height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; padding: 30px;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    header {
+      background: rgba(0, 0, 0, 0.9); padding: 15px 0;
+      position: fixed; top: 0; width: 100%; z-index: 100;
+    }
+    nav a {
+      color: cyan; margin: 0 20px; text-decoration: none;
+      font-weight: bold; transition: 0.3s;
+    }
+    nav a:hover {
+      color: magenta; text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+    }
+    .hero h1 {
+      font-size: 3.5rem; background: linear-gradient(to right, cyan, magenta);
+      -webkit-background-clip: text; color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+    .hero p {
+      font-size: 1.3rem; margin-top: 25px; max-width: 700px; line-height: 1.8;
+    }
+    .btn {
+      padding: 15px 40px; font-size: 1.2rem;
+      background: linear-gradient(135deg, cyan, magenta);
+      border-radius: 12px; color: white;
+      text-decoration: none; font-weight: bold;
+      transition: 0.3s; display: inline-block;
+    }
+    .btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px cyan;
+    }
+    .section {
+      padding: 80px 20px; margin: 50px auto; width: 80%;
+      background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);
+      border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .features {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+    }
+    .feature {
+      width: 30%; padding: 25px; background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px; transition: 0.3s;
+    }
+    .feature:hover {
+      transform: scale(1.05); background: rgba(0, 0, 0, 0.8);
+    }
+    footer {
+      padding: 20px; background: rgba(0, 0, 0, 0.8);
+      color: white; margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>NeuroHorizon AI</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#demos">Demos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to the Future of AI</h1>
+  <p>Revolutionizing AI in healthcare, gaming, and automation.</p>
+  <a href="#demos" class="btn">Explore Now</a>
+</div>
+
+<section id="about" class="section">
+  <h2>What is NeuroHorizon AI?</h2>
+  <p>NeuroHorizon AI is an advanced AI platform focused on groundbreaking research in machine learning, deep learning, and automation.</p>
+</section>
+
+<section id="features" class="section">
+  <h2>Key Features</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>🚀 AI Healthcare</h3>
+      <p>Smart diagnostics and predictive healthcare solutions.</p>
+    </div>
+    <div class="feature">
+      <h3>🎮 AI in Gaming</h3>
+      <p>Real-time AI-powered gaming experiences.</p>
+    </div>
+    <div class="feature">
+      <h3>🤖 Self-Learning AI</h3>
+      <p>Reinforcement learning models that evolve over time.</p>
+    </div>
+  </div>
+</section>
+
+<section id="demos" class="section">
+  <h2>Try AI Demos</h2>
+  <p>Upload an image and see what our Visual AI detects!</p>
+
+  <input type="file" accept="image/*" id="imageInput" onchange="previewImage()" style="margin: 20px auto; display: block;" />
+  <img id="preview" src="" style="max-width: 300px; display: none; border-radius: 12px; margin: 10px auto;" />
+
+  <button class="btn" onclick="analyzeImage()">Analyze Image</button>
+  <p id="aiPrediction" style="margin-top: 20px; font-size: 1.2rem;"></p>
+
+  <div class="section" style="margin-top: 60px;">
+    <h2>🧠 Chat with NeuroBot</h2>
+    <div id="chatWindow" style="height: 300px; overflow-y: auto; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; text-align: left; max-width: 600px; margin: auto;">
+      <div><strong>NeuroBot:</strong> Hello! Ask me anything about AI 🤖</div>
+    </div>
+    <div style="margin-top: 20px;">
+      <input type="text" id="chatInput" placeholder="Type your message..." style="padding: 10px; width: 60%; border-radius: 8px;" />
+      <button class="btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Want to collaborate? <a href="mailto:contact@neurohorizonai.com">Email us</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 NeuroHorizon AI | All Rights Reserved</p>
+</footer>
+
+<script>
+  function previewImage() {
+    const input = document.getElementById('imageInput');
+    const preview = document.getElementById('preview');
+    const file = input.files[0];
+    if (file) {
+      preview.src = URL.createObjectURL(file);
+      preview.style.display = 'block';
+    }
+  }
+
+  function analyzeImage() {
+    const output = document.getElementById('aiPrediction');
+    const preview = document.getElementById('preview');
+    if (!preview.src) {
+      output.textContent = "Please upload an image first!";
+      return;
+    }
+    output.textContent = "Analyzing... 🔍";
+    setTimeout(() => {
+      const predictions = [
+        "Detected: Cat with 98% confidence 🐱",
+        "Detected: Dog with 94% confidence 🐶",
+        "Detected: Person with 87% confidence 🧽",
+        "Detected: Futuristic robot 🤖",
+        "No object detected — try again!"
+      ];
+      const result = predictions[Math.floor(Math.random() * predictions.length)];
+      output.textContent = result;
+    }, 1500);
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("chatInput");
+    const chatWindow = document.getElementById("chatWindow");
+    const userText = input.value.trim();
+    if (!userText) return;
+
+    const userMsg = document.createElement("div");
+    userMsg.innerHTML = "<strong>You:</strong> " + userText;
+    chatWindow.appendChild(userMsg);
+
+    input.value = "";
+
+    const botMsg = document.createElement("div");
+    botMsg.innerHTML = "<strong>NeuroBot:</strong> thinking...";
+    chatWindow.appendChild(botMsg);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+
+    setTimeout(() => {
+      const reversed = userText.split("").reverse().join("");
+      botMsg.innerHTML = "<strong>NeuroBot:</strong> You said: " + userText + "<br>🧠 Here's a fun twist: " + reversed;
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }, 1500);
+  }
+</script>
+
+</body>
+</html>
