@@ -24,6 +24,5 @@ Download the code and open `index.html` in your browser.
 - `style.css` → custom styling (if separate)  
 - `assets/` → images and icons  
 
-## 🔗 Demo
-(http://127.0.0.1:5500/html%20ca%20exam/testproject.html#demos)
+
 
